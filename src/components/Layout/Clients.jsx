@@ -1,8 +1,8 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { clients, clients2 } from "../constants/constants";
+import { clients, clients2 } from "../../constants/constants";
 
 const Clients = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
-import Button from "./Button";
+import Button from "../Button";
 
 const Testimonials = () => {
   return (
@@ -48,7 +48,7 @@ const Testimonials = () => {
                 <img
                   src={item.imageUrl}
                   alt={item.name}
-                  className="w-16 h-16 rounded-full border-2 border-blue-500 shadow-sm"
+                  className="w-16 h-16 rounded-full border-1 border-blue-800 shadow-sm"
                 />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">

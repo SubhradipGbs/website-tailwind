@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section";
 import {
   FaCloud,
   FaDatabase,
@@ -7,7 +7,7 @@ import {
   FaMapLocationDot,
 } from "react-icons/fa6";
 import { FaGlobeAmericas } from "react-icons/fa";
-import Button from "./Button";
+import Button from "../Button";
 
 const Projects = () => {
   return (

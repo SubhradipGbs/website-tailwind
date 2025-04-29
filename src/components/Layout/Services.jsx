@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const Services = () => {
@@ -17,7 +17,7 @@ const Services = () => {
           future-ready.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-          <div className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
+          <div id="sapservice" className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               SAP Consulting & Implementation
             </h3>
@@ -73,7 +73,7 @@ const Services = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
+          <div id="itservice" className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               Enterprise IT Solutions
             </h3>
@@ -139,7 +139,7 @@ const Services = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
+          <div id="gisservice" className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               Enterprise IT Solutions
             </h3>

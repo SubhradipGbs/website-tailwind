@@ -2,32 +2,49 @@ export const navigations = [
   {
     id: "home",
     title: "Home",
-    href: "#home",
+    href: "home",
   },
   {
     id: "about",
     title: "About",
-    href: "#about",
+    href: "about",
   },
   {
     id: "services",
     title: "Services",
-    href: "#services",
+    href: "services",
+    submenu:[
+      {
+        id:"s1",
+        title:"SAP Services",
+        href:'sapservice'
+      },
+      {
+        id:"s2",
+        title:"IT Services",
+        href:'itservice'
+      },
+      {
+        id:"s3",
+        title:"GIS Services",
+        href:'gisservice'
+      }
+    ]
   },
   {
     id: "projects",
     title: "Projects",
-    href: "#projects",
+    href: "projects",
   },
   {
     id: "testimonials",
     title: "Testimonials",
-    href: "#testimonials",
+    href: "testimonials",
   },
   {
     id: "contact",
     title: "Contact",
-    href: "#contact",
+    href: "contact",
   },
 ];
 
