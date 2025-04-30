@@ -2,11 +2,25 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import { navigations } from "../../constants/constants";
 import { animateScroll, Link, scroller } from "react-scroll";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // NEW: track which dropdown is open
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const gotoSection = (nav) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${nav.href}`);
+    } else {
+      scroller.scrollTo(nav.href, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,11 +70,14 @@ const Header = () => {
                   className="relative group text-md font-semibold"
                 >
                   <div
+                    onClick={() => {
+                      gotoSection(nav);
+                    }}
                     onMouseEnter={() => toggleDropdown(nav.id)}
                     // onMouseLeave={() => toggleDropdown(null)}
                     className="cursor-pointer flex items-center gap-1 hover:-translate-y-0.5 transition-transform duration-200"
                   >
-                    <Link
+                    {/* <Link
                       activeClass="active-nav"
                       smooth={true}
                       spy
@@ -69,7 +86,10 @@ const Header = () => {
                       className="text-gray-600 hover:text-blue-700"
                     >
                       {nav.title}
-                    </Link>
+                    </Link> */}
+                    <span className="text-gray-600 hover:text-blue-700">
+                      {nav.title}
+                    </span>
                     {nav.submenu && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

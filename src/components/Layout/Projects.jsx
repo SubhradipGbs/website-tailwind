@@ -8,8 +8,10 @@ import {
 } from "react-icons/fa6";
 import { FaGlobeAmericas } from "react-icons/fa";
 import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   return (
     <Section id="projects" className="bg-gray-100">
       <div className="px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8 bg-gray-100">
@@ -117,7 +119,12 @@ const Projects = () => {
           ))}
         </div>
         <div className="flex justify-center items-center mt-8">
-          <Button className="rounded bg-blue-700 text-white hover:bg-blue-800 hover:-translate-y-0.5 transition-transform duration-200">
+          <Button
+            onClick={() => {
+              navigate("/projects");
+            }}
+            className="rounded bg-blue-700 text-white hover:bg-blue-800 hover:-translate-y-0.5 transition-transform duration-200"
+          >
             View All Project
           </Button>
         </div>

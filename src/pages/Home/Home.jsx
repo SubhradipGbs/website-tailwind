@@ -11,9 +11,11 @@ import Contact from "../../components/Layout/Contact";
 import Footer from "../../components/Layout/Footer";
 import { FaArrowUp } from "react-icons/fa6";
 import { animateScroll, scroller } from "react-scroll";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const scrollToContact = () => {
     scroller.scrollTo("contact", {
@@ -35,9 +37,20 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (location.hash) {
+      const section = location.hash.replace("#", "");
+      scroller.scrollTo(section, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+  }, [location]);
+
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <Clients />
       <About />
