@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <Section id="home">
-      <div className="grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-12 lg:p-8">
+      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-12 lg:p-8">
         <div className="container px-4 md:px-6 flex flex-col gap-6 justify-center items-start max-w-2xl">
           <div className="flex flex-col gap-4 md:gap-6">
             <h1 className="text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3rem] font-bold leading-tight">

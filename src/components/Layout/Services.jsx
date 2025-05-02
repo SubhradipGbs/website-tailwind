@@ -1,8 +1,10 @@
 import React from "react";
 import Section from "../Section";
 import { FaCircleCheck } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <Section id="services" className="bg-white text-gray-800">
       <div className="px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8">
@@ -17,7 +19,10 @@ const Services = () => {
           future-ready.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-          <div id="sapservice" className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
+          <div
+            id="sapservice"
+            className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               SAP Consulting & Implementation
             </h3>
@@ -68,12 +73,18 @@ const Services = () => {
               ))}
             </div>
             <div className="mt-auto">
-              <button className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold">
+              <button
+                onClick={() => navigate("/sap")}
+                className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold"
+              >
                 Explore SAP Services
               </button>
             </div>
           </div>
-          <div id="itservice" className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
+          <div
+            id="itservice"
+            className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               Enterprise IT Solutions
             </h3>
@@ -134,12 +145,18 @@ const Services = () => {
               ))}
             </div>
             <div className="mt-auto">
-              <button className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold">
-                Explore SAP Services
+              <button
+                onClick={() => navigate("/it")}
+                className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold"
+              >
+                Discover IT Services
               </button>
             </div>
           </div>
-          <div id="gisservice" className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
+          <div
+            id="gisservice"
+            className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
+          >
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               Enterprise IT Solutions
             </h3>
@@ -200,8 +217,11 @@ const Services = () => {
               ))}
             </div>
             <div className="mt-auto">
-              <button className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold">
-                Explore SAP Services
+              <button
+                onClick={() => navigate("/geo")}
+                className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold"
+              >
+                Explore Geospatial Services
               </button>
             </div>
           </div>

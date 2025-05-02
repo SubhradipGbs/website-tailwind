@@ -7,6 +7,9 @@ import "swiper/css/scrollbar";
 import Projects from "./pages/Projects/Projects";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
+import SAP from "./pages/SAP/SAP";
+import ITPage from "./pages/IT/ITPage";
+import GeoSpatial from "./pages/Geo/GeoSpatial";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/sap" element={<SAP />} />
+        <Route path="/it" element={<ITPage />} />
+        <Route path="/geo" element={<GeoSpatial />} />
       </Routes>
       <Footer />
     </BrowserRouter>

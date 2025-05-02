@@ -10,6 +10,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [activeNav, setActiveNav] = useState("home");
+
   const gotoSection = (nav) => {
     if (location.pathname !== "/") {
       navigate(`/#${nav.href}`);
@@ -20,6 +22,7 @@ const Header = () => {
         smooth: "easeInOutQuart",
       });
     }
+    setActiveNav(nav.href);
   };
 
   useEffect(() => {
@@ -75,7 +78,7 @@ const Header = () => {
                     }}
                     onMouseEnter={() => toggleDropdown(nav.id)}
                     // onMouseLeave={() => toggleDropdown(null)}
-                    className="cursor-pointer flex items-center gap-1 hover:-translate-y-0.5 transition-transform duration-200"
+                    className={`cursor-pointer flex items-center gap-1 hover:-translate-y-0.5 transition-transform duration-200 ${activeNav === nav.href ? "text-blue-800 border-b-3 border-blue-800" : "text-gray-600"}`}
                   >
                     {/* <Link
                       activeClass="active-nav"
@@ -87,7 +90,7 @@ const Header = () => {
                     >
                       {nav.title}
                     </Link> */}
-                    <span className="text-gray-600 hover:text-blue-700">
+                    <span className="hover:text-blue-700">
                       {nav.title}
                     </span>
                     {nav.submenu && (
