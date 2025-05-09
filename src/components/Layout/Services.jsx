@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
   const navigate = useNavigate();
   return (
-    <Section id="services" className="bg-white text-gray-800">
+    <Section id="services" className="bg-white text-gray-800 dark:bg-gray-900">
       <div className="px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8">
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-3xl font-bold text-center mb-8 dark:text-gray-200">
           Our Core Services
         </h2>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8">
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8 dark:text-gray-400">
           We deliver end-to-end SAP consulting, enterprise IT services, and
           geospatial solutions tailored for the utility sector and beyond. From
           digital transformation to intelligent infrastructure planning, our
@@ -158,54 +158,39 @@ const Services = () => {
             className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
           >
             <h3 className="text-xl md:text-2xl font-bold mb-4">
-              Enterprise IT Solutions
+              Geospatial Intelligence Services
             </h3>
             <p className="text-gray-700 mt-5">
-              Future-proof your organization with agile, secure, and scalable IT
-              services. From cloud infrastructure to portal development, we
-              empower digital transformation with reliable tech expertise.
+              Unlock powerful insights from location-based data. Our geospatial
+              solutions merge GIS technology with drone-based surveying to
+              support planning, infrastructure, utility networks, and
+              environmental studies.
             </p>
             <div className="mt-10 mb-[3rem]">
               {[
                 {
                   id: 1,
-                  desc: "Custom Web & Software Development",
+                  desc: "GIS Data Architecture & Management",
                 },
                 {
                   id: 2,
-                  desc: "Cloud Infrastructure & DevOps",
+                  desc: "Advanced Spatial Analysis & Mapping",
                 },
                 {
                   id: 3,
-                  desc: "IT Infrastructure Setup & Management",
+                  desc: "Custom GIS & Web Applications",
                 },
                 {
                   id: 4,
-                  desc: "Enterprise Cybersecurity Solutions",
+                  desc: "Drone-Based Aerial Surveys",
                 },
                 {
                   id: 5,
-                  desc: "WEB GIS & SAP Web Portal Development",
+                  desc: "Topographic & Land Development Surveys",
                 },
                 {
                   id: 6,
-                  desc: "Custom Enterprise Portals",
-                },
-                {
-                  id: 7,
-                  desc: "Mobility Solutions",
-                },
-                {
-                  id: 7,
-                  desc: "Hybrid App Development",
-                },
-                {
-                  id: 7,
-                  desc: "AWS Cloud Solutions",
-                },
-                {
-                  id: 7,
-                  desc: "Analytics Dashboards Development",
+                  desc: "3D Terrain Modeling & Visualization",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 mt-4 ms-2">

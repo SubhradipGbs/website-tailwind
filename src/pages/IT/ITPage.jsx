@@ -7,6 +7,7 @@ import {
   FaLaptopCode,
   FaLayerGroup,
 } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 const ITPage = () => {
   useEffect(() => {
@@ -43,14 +44,15 @@ const ITPage = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 gap-4">
-              <Button
-                onClick={() => {
-                  scrollToSection("services");
-                }}
+              <Link
+                to="it-services"
+                smooth={true}
+                duration={500}
+                offset={-100}
                 className="bg-yellow-400 text-black hover:bg-yellow-300 rounded px-4 py-2"
               >
                 Explore IT Services
-              </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full h-full flex justify-center items-center mt-6 lg:mt-0">
@@ -62,7 +64,7 @@ const ITPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="bg-gray-100">
+      <Section className="bg-gray-100" id="it-services">
         <h2 className="text-3xl font-bold text-center mb-8">IT Services</h2>
         <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8">
           Empowering Enterprises with Innovative IT Solutions

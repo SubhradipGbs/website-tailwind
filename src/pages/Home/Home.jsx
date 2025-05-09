@@ -53,9 +53,10 @@ const Home = () => {
       {/* <Header /> */}
       <Hero />
       <Clients />
+      <div></div>
       <About />
       <Services />
-      <div className="w-full flex flex-col md:flex-row px-4 lg:px-32 justify-between items-center bg-blue-600 p-6 mb-6 min-h-[12rem]">
+      <div className="w-full flex flex-col md:flex-row px-4 lg:px-32 justify-between items-center bg-blue-600 p-6 min-h-[12rem]">
         <div className="flex flex-col gap-4 text-center md:text-left">
           <h2 className="text-lg xl:text-2xl text-white font-bold">
             Ready to transform your business with our IT solutions?

@@ -13,7 +13,7 @@ import { navigations } from "../../constants/constants";
 const Footer = () => {
   const date = new Date();
   return (
-    <Section className="bg-gray-100" customPaddings="pt-12 lg:pt-20">
+    <Section className="bg-gray-100 pt-12 pb-0 mb-0 lg:pt-16 lg:pb-0 xl:pt-20 xl:pb-0">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58971.110174792775!2d88.22635154863282!3d22.515646800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270ea077cc165%3A0x5bcca8f544194bb6!2sGlobal%20Business%20Solutions!5e0!3m2!1sen!2sin!4v1744217435286!5m2!1sen!2sin"
         loading="lazy"
@@ -30,16 +30,22 @@ const Footer = () => {
               deliver innovative technology solutions to clients worldwide.
             </p>
             <div className="flex gap-4">
-              {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map(
-                (Icon, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-gray-700 hover:bg-blue-600 p-3 rounded-full transition-colors duration-300 cursor-pointer"
-                  >
-                    <Icon />
-                  </div>
-                )
-              )}
+              {[
+                { Icon: FaFacebookF, link: "https://www.facebook.com/share/1E7RpBRi58/" },
+                { Icon: FaTwitter, link: "https://twitter.com" },
+                { Icon: FaLinkedinIn, link: "https://www.linkedin.com/company/gbserp" },
+                { Icon: FaInstagram, link: "https://instagram.com" },
+              ].map(({ Icon, link }, idx) => (
+                <a
+                  key={idx}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 hover:bg-blue-600 p-3 rounded-full transition-colors duration-300 cursor-pointer"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
           <div className="px-2 w-full md:w-1/2 lg:w-2/12">
@@ -72,11 +78,11 @@ const Footer = () => {
             </p>
             <div className="flex flex-col sm:flex-row w-full">
               <input
-                className="bg-white text-gray-800 rounded-l-md sm:rounded-l-md sm:rounded-r-none px-4 py-2 w-full sm:w-auto sm:flex-1 mb-2 sm:mb-0"
+                className="bg-white text-gray-800 rounded sm:rounded-l-md sm:rounded-r-none px-4 py-2 w-full sm:w-auto sm:flex-1 mb-2 sm:mb-0"
                 type="email"
                 placeholder="Your Email"
               />
-              <Button className="bg-blue-800 hover:bg-blue-900 text-white rounded-r px-4 py-2 w-full sm:w-auto">
+              <Button className="bg-blue-800 hover:bg-blue-900 text-white rounded sm:rounded-r px-4 py-2 w-full sm:w-auto">
                 Subscribe
               </Button>
             </div>

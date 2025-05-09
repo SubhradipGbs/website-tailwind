@@ -10,7 +10,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [activeNav, setActiveNav] = useState("home");
+  const [activeNav, setActiveNav] = useState("");
 
   const gotoSection = (nav) => {
     if (location.pathname !== "/") {
@@ -22,7 +22,20 @@ const Header = () => {
         smooth: "easeInOutQuart",
       });
     }
-    setActiveNav(nav.href);
+    // setActiveNav(nav.href);
+  };
+
+  const gotoMobileSection = (nav) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${nav.href}`);
+    } else {
+      scroller.scrollTo(nav.href, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -47,7 +60,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-shadow duration-300 py-2 lg:py-3 xl:py-4 bg-white ${
+      className={`fixed top-0 w-full z-50 transition-shadow duration-300 py-2 lg:py-3 xl:py-4 bg-white dark:bg-gray-900 ${
         isScrolled ? "shadow-lg" : ""
       }`}
     >
@@ -58,7 +71,7 @@ const Header = () => {
             <img
               src="/LOGO_NEW_01.png"
               alt="Logo"
-              className="h-10 md:h-15 w-auto"
+              className="h-10 md:h-15 w-auto dark:drop-shadow-lg"
             />
           </div>
         </Link>
@@ -78,7 +91,11 @@ const Header = () => {
                     }}
                     onMouseEnter={() => toggleDropdown(nav.id)}
                     // onMouseLeave={() => toggleDropdown(null)}
-                    className={`cursor-pointer flex items-center gap-1 hover:-translate-y-0.5 transition-transform duration-200 ${activeNav === nav.href ? "text-blue-800 border-b-3 border-blue-800" : "text-gray-600"}`}
+                    className={`cursor-pointer flex items-center gap-1 hover:-translate-y-0.5 transition-transform duration-200 ${
+                      activeNav === nav.href
+                        ? "text-blue-800 border-b-3 border-blue-800 dark:text-blue-400 dark:border-blue-400"
+                        : "text-gray-600 dark:text-white"
+                    } dark:hover:text-blue-400 dark:hover:border-blue-400`}
                   >
                     {/* <Link
                       activeClass="active-nav"
@@ -90,9 +107,7 @@ const Header = () => {
                     >
                       {nav.title}
                     </Link> */}
-                    <span className="hover:text-blue-700">
-                      {nav.title}
-                    </span>
+                    <span className="hover:text-blue-700">{nav.title}</span>
                     {nav.submenu && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +135,7 @@ const Header = () => {
                     >
                       {nav.submenu.map((subItem) => (
                         <li key={subItem.id} className="cursor-pointer">
-                          <Link
+                          {/* <Link
                             smooth
                             duration={500}
                             to={subItem.href}
@@ -128,7 +143,15 @@ const Header = () => {
                             className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-gray-100"
                           >
                             {subItem.title}
-                          </Link>
+                          </Link> */}
+                          <div
+                            onClick={() => {
+                              gotoSection(subItem);
+                            }}
+                            className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-gray-100"
+                          >
+                            {subItem.title}
+                          </div>
                         </li>
                       ))}
                     </ul>
@@ -149,24 +172,32 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <div className="lg:hidden flex items-center">
           <button
-            className="text-gray-600 hover:text-blue-700 focus:outline-none"
+            className="flex flex-col justify-center items-center text-gray-600 hover:text-blue-700 focus:outline-none"
             aria-label="Toggle Mobile Menu"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <span
+              className={`bg-gray-500 block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm ${
+                      isMobileMenuOpen
+                        ? "rotate-45 translate-y-1"
+                        : "-translate-y-0.5"
+                    }`}
+            ></span>
+            <span
+              className={`bg-gray-500 block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm my-0.5 ${
+                      isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                    }`}
+            ></span>
+            <span
+              className={`bg-gray-500 block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm ${
+                      isMobileMenuOpen
+                        ? "-rotate-45 -translate-y-1"
+                        : "translate-y-0.5"
+                    }`}
+            ></span>
           </button>
         </div>
       </div>
@@ -179,22 +210,23 @@ const Header = () => {
               {navigations.map((nav) => (
                 <li key={nav.id}>
                   <div className="flex flex-col">
-                    <a
-                      href={nav.href || "#"}
+                    <div
                       className="block text-gray-600 hover:text-blue-700 text-md font-semibold"
+                      onClick={() => gotoMobileSection(nav)}
                     >
                       {nav.title}
-                    </a>
+                    </div>
                     {nav.submenu && (
                       <ul className="pl-4 mt-2 space-y-2">
                         {nav.submenu.map((subItem) => (
-                          <li key={subItem.id}>
-                            <a
-                              href={subItem.href}
-                              className="block text-gray-500 hover:text-blue-700 text-sm"
-                            >
-                              {subItem.title}
-                            </a>
+                          <li
+                            key={subItem.id}
+                            className="block text-gray-500 hover:text-blue-700 text-sm"
+                            onClick={() => {
+                              gotoMobileSection(subItem);
+                            }}
+                          >
+                            {subItem.title}
                           </li>
                         ))}
                       </ul>

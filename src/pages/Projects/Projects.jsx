@@ -3,7 +3,7 @@ import Section from "../../components/Section";
 import Button from "../../components/Button";
 import CountUp from "react-countup";
 import { projectsData } from "../../constants/constants";
-import { animateScroll } from "react-scroll";
+import { animateScroll, Link } from "react-scroll";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
@@ -55,9 +55,15 @@ const Projects = () => {
               solutions, optimized SAP implementations, and innovative IT
               services for industry leaders.
             </p>
-            <Button className="bg-blue-800 text-white hover:bg-blue-900 rounded px-6 py-3 text-sm md:text-base">
+            <Link
+              to="all-projects"
+              smooth
+              duration={500}
+              offset={-100}
+              className="bg-blue-800 text-white hover:bg-blue-900 rounded px-6 py-3 text-sm md:text-base cursor-pointer"
+            >
               Explore Our Work
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-3 justify-around items-center p-4 bg-blue-700">
@@ -91,7 +97,9 @@ const Projects = () => {
                   suffix={item.suffix}
                   enableScrollSpy
                   scrollSpyDelay={50}
-                />
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </h1>
               <h2 className="text-white text-center text-sm md:text-base font-semibold">
                 {item.label}
@@ -104,7 +112,10 @@ const Projects = () => {
         className="bg-gray-100 text-gray-900"
         customPaddings="py-12 lg:py-20"
       >
-        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-14 py-12">
+        <div
+          id="all-projects"
+          className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-14 py-12"
+        >
           <h2 className="text-3xl font-bold text-center mb-8">
             Our Geospatial Portfolio
           </h2>
@@ -141,6 +152,7 @@ const Projects = () => {
             },
           ].map((item, index) => (
             <button
+              key={index}
               onClick={() => filterProjects(item.category)}
               className={`border cursor-pointer border-blue-700 ${
                 index == 0 && "rounded-l-full"
@@ -157,13 +169,16 @@ const Projects = () => {
           ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-6 lg:px-10 xl:px-14 py-10">
-          {projects.map((item) => (
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 text-center flex flex-col gap-4 max-w-sm mx-auto border border-gray-100 hover:-translate-y-0.5 transition-transform duration-200">
+          {projects.map((item, index) => (
+            <div
+              key={item.title + index}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 text-center flex flex-col gap-4 max-w-sm mx-auto border border-gray-100 hover:-translate-y-0.5 transition-transform duration-200"
+            >
               <div className="flex flex-col justify-center items-center gap-3">
                 <div className="h-16 w-16 rounded-full shadow-md bg-blue-50 flex justify-center items-center text-blue-800">
                   <i className={`fas ${item.iconClass} fa-2x text-primary`} />
                 </div>
-                <span className="py-1 px-3 bg-[#ff7043] text-white rounded-full text-xs font-semibold uppercase tracking-wide shadow-sm">
+                <span className="py-1 px-3 bg-emerald-500 text-white rounded-full text-xs font-semibold uppercase tracking-wide shadow-sm">
                   {item.badgeText}
                 </span>
               </div>

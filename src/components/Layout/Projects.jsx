@@ -13,19 +13,21 @@ import { useNavigate } from "react-router-dom";
 const Projects = () => {
   const navigate = useNavigate();
   return (
-    <Section id="projects" className="bg-gray-100">
-      <div className="px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-8">
+    <Section id="projects" className="bg-gray-100 dark:bg-gray-900">
+      <div className="px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8 bg-gray-100 dark:bg-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-8 dark:text-gray-200">
           Our Service Projects
         </h2>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8">
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8 dark:text-gray-400">
           Explore our successful implementations across different industries,
           leveraging our expertise in SAP, IT, and Geospatial services.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
           {[
             {
-              logo: <FaGears className="text-blue-700 text-[4rem] mb-4" />,
+              logo: (
+                <FaGears className="text-blue-700 text-[4rem] mb-4 dark:text-blue-400" />
+              ),
               title: "SAP S/4HANA Implementation",
               description:
                 "Complete SAP S/4HANA implementation for a manufacturing company, optimizing their operations and supply chain.",
@@ -34,7 +36,9 @@ const Projects = () => {
               url: "#",
             },
             {
-              logo: <FaDatabase className="text-blue-700 text-[4rem] mb-4" />,
+              logo: (
+                <FaDatabase className="text-blue-700 text-[4rem] mb-4 dark:text-blue-400 " />
+              ),
               title: "SAP Business One Implementation",
               description:
                 "SAP Business One implementation for a growing manufacturing company to streamline operations and improve reporting.",
@@ -43,7 +47,9 @@ const Projects = () => {
               url: "#",
             },
             {
-              logo: <FaCloud className="text-green-700 text-[4rem] mb-4" />,
+              logo: (
+                <FaCloud className="text-green-700 text-[4rem] mb-4 dark:text-green-400" />
+              ),
               title: "Enterprise Cloud Migration",
               description:
                 "Successful migration of on-premises infrastructure to cloud for a financial services firm, improving scalability and security.",
@@ -52,7 +58,9 @@ const Projects = () => {
               url: "#",
             },
             {
-              logo: <FaGears className="text-green-700 text-[4rem] mb-4" />,
+              logo: (
+                <FaGears className="text-green-700 text-[4rem] mb-4 dark:text-green-400" />
+              ),
               title: "Custom ERP Development",
               description:
                 "Custom ERP solution development for a retail chain with 50+ locations, integrating inventory, sales, and HR functions.",
@@ -85,35 +93,38 @@ const Projects = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="card bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center gap-4 hover:shadow-xl transition-shadow duration-300"
+              className="card bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center gap-4 hover:shadow-xl transition-shadow duration-300 dark:bg-gray-900"
             >
               <div className="logo flex justify-end items-center gap-0.5">
                 {item.logo}
                 <div
                   className={`badge ${
                     item.tag === "SAP"
-                      ? "bg-blue-700"
+                      ? "bg-blue-700 dark:bg-blue-400"
                       : item.tag === "IT"
-                      ? "bg-green-700"
+                      ? "bg-green-700 dark:bg-green-400"
                       : "bg-yellow-500"
-                  } py-[2px] px-[5px] rounded-sm text-white text-[0.7rem] mt-auto font-bold`}
+                  } py-[2px] px-[5px] rounded-sm text-white text-[0.7rem] mt-auto font-bold dark:text-gray-200`}
                 >
                   {item.tag}
                 </div>
               </div>
               <div className="content flex flex-col gap-1">
-                <h3 className="text-gray-800 text-sm md:text-[1.2rem] font-semibold">
+                <h3 className="text-gray-800 text-sm md:text-[1.2rem] font-semibold dark:text-gray-200">
                   {item.title}
                 </h3>
-                <p className="text-gray-800">{item.description}</p>
+                <p className="text-gray-800 dark:text-gray-400">
+                  {item.description}
+                </p>
               </div>
               <div className="buttons mt-auto">
-                <a
+                {/* <a
                   href={item.url}
-                  className="border border-blue-700 text-blue-700 bg-white hover:bg-blue-700 hover:text-white rounded-md px-4 py-1 transition-transform duration-200"
+                  className="border border-blue-700 text-blue-700 bg-white hover:bg-blue-700 hover:text-white rounded-md px-4 py-1 transition-transform duration-200 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-blue-700 dark:hover:text-white"
+                  target="_blank"
                 >
                   {item.buttonText}
-                </a>
+                </a> */}
               </div>
             </div>
           ))}

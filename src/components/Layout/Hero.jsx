@@ -34,23 +34,33 @@ const Hero = () => {
 
   return (
     <Section id="home">
-      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-12 lg:p-8">
+      <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-12 lg:p-8 dark:from-blue-950 dark:to-blue-800 dark:text-gray-200">
         <div className="container px-4 md:px-6 flex flex-col gap-6 justify-center items-start max-w-2xl">
           <div className="flex flex-col gap-4 md:gap-6">
-            <h1 className="text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3rem] font-bold leading-tight">
+            <h1 className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-tight">
               Innovative IT Solutions for the Modern Business Landscape
             </h1>
-            <p className="text-[0.9rem] md:text-[1rem] lg:text-[1.2rem]">
+            <p className="text-[0.9rem] sm:text-[1rem] md:text-[1.2rem]">
               Empowering organizations with top-notch services in SAP
               consulting, IT, Geospatial technologies and services to drive
               digital transformation and sustainable growth.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <Button onClick={()=>{scrollToSection('contact')}} className="bg-white text-blue-600 hover:bg-gray-200 hover:text-black rounded px-4 py-2">
+            <Button
+              onClick={() => {
+                scrollToSection("contact");
+              }}
+              className="bg-white text-blue-600 hover:bg-gray-200 hover:text-black rounded px-4 py-2"
+            >
               Talk to an Expert
             </Button>
-            <Button onClick={()=>{scrollToSection('services')}} className="bg-yellow-400 text-black hover:bg-yellow-300 rounded px-4 py-2">
+            <Button
+              onClick={() => {
+                scrollToSection("services");
+              }}
+              className="bg-yellow-400 text-black hover:bg-yellow-300 rounded px-4 py-2"
+            >
               Explore our Services
             </Button>
           </div>
@@ -59,13 +69,13 @@ const Hero = () => {
           <img
             src="/celebration.png"
             alt="Logo"
-            className="h-[25rem] md:[20rem] lg:h-[30rem] w-auto"
+            className="size-[30rem] sm:size-[40rem] lg:size-[30rem] object-cover"
           />
         </div>
       </div>
 
       {/* carousel */}
-      <div className="relative w-full overflow-hidden bg-blue-700 text-white p-6">
+      <div className="relative w-full overflow-hidden bg-blue-700 text-white p-6 dark:bg-blue-900 dark:text-gray-200">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${current * 100}%)` }}

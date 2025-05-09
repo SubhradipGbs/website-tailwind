@@ -3,6 +3,7 @@ import Section from "../../components/Section";
 import Button from "../../components/Button";
 import { FaCircleCheck, FaDatabase } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const SAP = () => {
   
@@ -35,14 +36,15 @@ const SAP = () => {
               >
                 Talk to an Expert
               </Button> */}
-              <Button
-                onClick={() => {
-                  scrollToSection("services");
-                }}
+              <Link
+                to="sap-services"
+                smooth={true}
+                duration={500}
+                offset={-100}
                 className="bg-yellow-400 text-black hover:bg-yellow-300 rounded px-4 py-2"
               >
                 Explore SAP Services
-              </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full h-full flex justify-center items-center mt-6 lg:mt-0">
@@ -54,7 +56,7 @@ const SAP = () => {
           </div>
         </div>
       </Section>
-      <Section className="bg-gray-100">
+      <Section className="bg-gray-100" id="sap-services">
         <h2 className="text-3xl font-bold text-center mb-8">SAP Services</h2>
         <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8">
           Discover our comprehensive SAP services designed to streamline your

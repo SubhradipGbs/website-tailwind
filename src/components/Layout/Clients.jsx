@@ -8,10 +8,10 @@ const Clients = () => {
   return (
     <Section customPaddings="py-5 lg:py-8 xl:py-10">
       <div className="flex flex-col justify-center text-center px-[2rem] md:px-[3rem] lg:px-[5rem] ">
-        <h2 className="text-gray-500 font-semibold text-[1rem]  leading-tight">
+        <h2 className="text-gray-500 font-semibold text-[1rem]  leading-tight mb-4 dark:text-gray-400">
           TRUSTED BY INDUSTRY LEADERS
         </h2>
-        <div className="py-2 lg:py-5 xl:py-8 mx-2 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="py-2 lg:py-5 xl:py-8 mx-2 md:mx-8 lg:mx-10 xl:mx-12 dark:bg-gray-800">
           <Swiper
             className="mySwiper"
             modules={[Autoplay]}
@@ -48,7 +48,7 @@ const Clients = () => {
             ))}
           </Swiper>
         </div>
-        <div className="pb-2 mx-2 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="pb-2 mx-2 md:mx-8 lg:mx-10 xl:mx-12 dark:bg-gray-800">
           <Swiper
             className="mySwiper"
             modules={[Autoplay]}
