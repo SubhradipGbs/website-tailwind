@@ -12,6 +12,7 @@ import Footer from "../../components/Layout/Footer";
 import { FaArrowUp } from "react-icons/fa6";
 import { animateScroll, scroller } from "react-scroll";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,27 +51,41 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>GBS- Global Business Solutions</title>
+        <meta
+          name='description'
+          content='GBS is a leading IT consulting and services company, specializing in SAP, IT solutions, and geospatial services. With over 15 years of experience, we drive innovation and operational excellence for enterprises worldwide.'
+        />
+        <link rel='canonical' href='https://website.gbsit.co.in' />
+        <meta property='og:title' content='GBS- Global Business Solutions' />
+        <meta
+          property='og:description'
+          content='GBS is a leading IT consulting and services company, specializing in SAP, IT solutions, and geospatial services. With over 15 years of experience, we drive innovation and operational excellence for enterprises worldwide.'
+        />
+        <meta property='og:url' content='https://website.gbsit.co.in' />
+        <meta property='og:type' content='website' />
+      </Helmet>
       {/* <Header /> */}
       <Hero />
       <Clients />
       <div></div>
       <About />
       <Services />
-      <div className="w-full flex flex-col md:flex-row px-4 lg:px-32 justify-between items-center bg-gradient-to-r from-blue-700 to-blue-500 p-6 min-h-[12rem]">
-        <div className="flex flex-col gap-4 text-center md:text-left">
-          <h2 className="text-lg xl:text-2xl text-white font-bold">
+      <div className='w-full flex flex-col md:flex-row px-4 lg:px-32 justify-between items-center bg-gradient-to-r from-blue-700 to-blue-500 p-6 min-h-[12rem]'>
+        <div className='flex flex-col gap-4 text-center md:text-left'>
+          <h1 className='text-lg xl:text-2xl text-white font-bold'>
             Ready to transform your business with our IT solutions?
-          </h2>
-          <p className="text-white text-sm md:text-base">
+          </h1>
+          <p className='text-white text-sm md:text-base'>
             Let's discuss how our services can help you achieve your business
             goals.
           </p>
         </div>
-        <div className="flex mt-4 md:mt-0">
+        <div className='flex mt-4 md:mt-0'>
           <Button
             onClick={scrollToContact}
-            className="bg-white text-blue-700 rounded-md px-4 py-2 hover:-translate-y-1 transition-transform duration-200"
-          >
+            className='bg-white text-blue-700 rounded-md px-4 py-2 hover:-translate-y-1 transition-transform duration-200'>
             Get Started Today
           </Button>
         </div>
@@ -79,20 +94,17 @@ const Home = () => {
       <Testimonials />
       <Contact />
       <iframe
-        className="w-full max-w-full"
+        className='w-full max-w-full'
         height={500}
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2191.524049585611!2d88.30155210418694!3d22.515832483818922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270ea077cc165%3A0x5bcca8f544194bb6!2sGlobal%20Business%20Solutions!5e0!3m2!1sen!2sin!4v1747114053911!5m2!1sen!2sin"
-        loading="lazy"
-      ></iframe>
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2191.524049585611!2d88.30155210418694!3d22.515832483818922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270ea077cc165%3A0x5bcca8f544194bb6!2sGlobal%20Business%20Solutions!5e0!3m2!1sen!2sin!4v1747114053911!5m2!1sen!2sin'
+        loading='lazy'></iframe>
       <div
         className={`fixed bottom-6 right-6 z-50 ${
           isScrolled ? "block" : "hidden"
-        }`}
-      >
+        }`}>
         <div
           onClick={scrollTop}
-          className="w-0 h-0 md:w-[50px] md:h-[50px] rounded-full bg-blue-600 text-white cursor-pointer flex justify-center items-center shadow-2xl shadow-gray-800 hover:bg-blue-700 transition-colors duration-300"
-        >
+          className='w-0 h-0 md:w-[50px] md:h-[50px] rounded-full bg-blue-600 text-white cursor-pointer flex justify-center items-center shadow-2xl shadow-gray-800 hover:bg-blue-700 transition-colors duration-300'>
           <FaArrowUp size={20} />
         </div>
       </div>

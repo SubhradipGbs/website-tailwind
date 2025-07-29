@@ -3,6 +3,7 @@ import Section from "../../components/Section";
 import CountUp from "react-countup";
 import { projectsData } from "../../constants/constants";
 import { Link } from "react-scroll";
+import { Helmet } from "react-helmet";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
@@ -25,47 +26,44 @@ const Projects = () => {
   return (
     <div>
       <Section
-        className="bg-gray-100 text-gray-900"
-        customPaddings="py-12 lg:py-20"
-      >
-        <div className="relative h-[95vh] md:h-[90vh] w-full overflow-hidden">
+        className='bg-gray-100 text-gray-900'
+        customPaddings='py-12 lg:py-20'>
+        <div className='relative h-[95vh] md:h-[90vh] w-full overflow-hidden'>
           {/* Background Video */}
           <video
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            className='absolute top-0 left-0 w-full h-full object-cover z-0'
             autoPlay
             loop
             muted
-            playsInline
-          >
-            <source src="/Deocha_Sample_video.mp4" type="video/mp4" />
+            playsInline>
+            <source src='/Deocha_Sample_video.mp4' type='video/mp4' />
             Your browser does not support the video tag.
           </video>
 
           {/* Overlay */}
-          <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
+          <div className='absolute top-0 left-0 w-full h-full bg-black/60 z-10' />
 
           {/* Content */}
-          <div className="relative z-20 flex flex-col justify-center items-center h-full text-center px-4 md:px-8">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-md">
+          <div className='relative z-20 flex flex-col justify-center items-center h-full text-center px-4 md:px-8'>
+            <h1 className='text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-md'>
               Geospatial Excellence in Action
             </h1>
-            <p className="text-gray-200 text-base sm:text-lg md:text-xl max-w-4xl mb-6 drop-shadow">
+            <p className='text-gray-200 text-base sm:text-lg md:text-xl max-w-4xl mb-6 drop-shadow'>
               Leveraging cutting-edge technology to deliver precise geospatial
               solutions, optimized SAP implementations, and innovative IT
               services for industry leaders.
             </p>
             <Link
-              to="all-projects"
+              to='all-projects'
               smooth
               duration={500}
               offset={-100}
-              className="bg-blue-800 text-white hover:bg-blue-900 rounded px-6 py-3 text-sm md:text-base cursor-pointer"
-            >
+              className='bg-blue-800 text-white hover:bg-blue-900 rounded px-6 py-3 text-sm md:text-base cursor-pointer'>
               Explore Our Work
             </Link>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-3 justify-around items-center p-4 bg-blue-700">
+        <div className='w-full flex flex-col md:flex-row gap-3 justify-around items-center p-4 bg-blue-700'>
           {[
             {
               count: "50",
@@ -89,18 +87,17 @@ const Projects = () => {
             },
           ].map((item, index) => (
             <div key={index}>
-              <h1 className="text-white text-[2rem] md:text-[2.5rem] font-bold mb-2 text-center">
+              <h1 className='text-white text-[2rem] md:text-[2.5rem] font-bold mb-2 text-center'>
                 <CountUp
                   start={0}
                   end={item.count}
                   suffix={item.suffix}
                   enableScrollSpy
-                  scrollSpyDelay={50}
-                >
+                  scrollSpyDelay={50}>
                   {({ countUpRef }) => <span ref={countUpRef} />}
                 </CountUp>
               </h1>
-              <h2 className="text-white text-center text-sm md:text-base font-semibold">
+              <h2 className='text-white text-center text-sm md:text-base font-semibold'>
                 {item.label}
               </h2>
             </div>
@@ -108,22 +105,20 @@ const Projects = () => {
         </div>
       </Section>
       <Section
-        className="bg-gray-100 text-gray-900"
-        customPaddings="py-12 lg:py-20"
-      >
+        className='bg-gray-100 text-gray-900'
+        customPaddings='py-12 lg:py-20'>
         <div
-          id="all-projects"
-          className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-14 py-12"
-        >
-          <h2 className="text-3xl font-bold text-center mb-8">
+          id='all-projects'
+          className='container mx-auto px-4 md:px-6 lg:px-10 xl:px-14 py-12'>
+          <h2 className='text-3xl font-bold text-center mb-8'>
             Our Geospatial Portfolio
           </h2>
-          <p className="text-md md:text-lg lg:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-10">
+          <p className='text-md md:text-lg lg:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-10'>
             Discover our comprehensive geospatial solutions leveraging
             cutting-edge technologies across industries
           </p>
         </div>
-        <div className="flex justify-center items-center gap-1 px-4 md:px-6 lg:px-10 xl:px-14">
+        <div className='flex justify-center items-center gap-1 px-4 md:px-6 lg:px-10 xl:px-14'>
           {[
             {
               label: "All Projects",
@@ -151,6 +146,7 @@ const Projects = () => {
             },
           ].map((item, index) => (
             <button
+              name={`Filter ${item.label}`}
               key={index}
               onClick={() => filterProjects(item.category)}
               className={`border cursor-pointer border-blue-700 text-xs md:text-md lg:text-lg ${
@@ -161,41 +157,39 @@ const Projects = () => {
                 activeCat == item.category
                   ? "bg-blue-700 text-white"
                   : "bg-white"
-              }`}
-            >
+              }`}>
               {item.label}
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-6 lg:px-10 xl:px-14 py-10">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-6 lg:px-10 xl:px-14 py-10'>
           {projects.map((item, index) => (
             <div
               key={item.title + index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 text-center flex flex-col max-w-sm mx-auto border border-gray-100 hover:-translate-y-0.5 transition-transform duration-200 min-h-[400px]"
-            >
-              <div className="flex flex-col justify-center items-center gap-3">
-                <div className="size-16 rounded-full 2xl:size-20 shadow-md bg-blue-50 flex justify-center items-center text-blue-800">
+              className='bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 text-center flex flex-col max-w-sm mx-auto border border-gray-100 hover:-translate-y-0.5 transition-transform duration-200 min-h-[400px]'>
+              <div className='flex flex-col justify-center items-center gap-3'>
+                <div className='size-16 rounded-full 2xl:size-20 shadow-md bg-blue-50 flex justify-center items-center text-blue-800'>
                   <i className={`fas ${item.iconClass} fa-2x text-primary`} />
                 </div>
-                <span className="py-1 px-3 bg-emerald-500 text-white rounded-full text-xs font-semibold uppercase tracking-wide shadow-sm">
+                <span className='py-1 px-3 bg-emerald-500 text-white rounded-full text-xs font-semibold uppercase tracking-wide shadow-sm'>
                   {item.badgeText}
                 </span>
               </div>
 
-              <div className="flex flex-col gap-2 mt-4">
-                <h2 className="text-xl font-bold text-gray-800">
+              <div className='flex flex-col gap-2 mt-4'>
+                <h2 className='text-xl font-bold text-gray-800'>
                   {item.title}
                 </h2>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className='text-gray-600 text-sm leading-relaxed'>
                   {item.description}
                 </p>
               </div>
 
-              <div className="mt-auto pt-4">
-                <hr className="border-gray-200 mb-3" />
-                <div className="flex items-end justify-center gap-2 text-gray-500 text-sm mx-4">
+              <div className='mt-auto pt-4'>
+                <hr className='border-gray-200 mb-3' />
+                <div className='flex items-end justify-center gap-2 text-gray-500 text-sm mx-4'>
                   <span>
-                    <strong className="text-gray-700">Client: </strong>
+                    <strong className='text-gray-700'>Client: </strong>
                     {item.client}
                   </span>
                 </div>

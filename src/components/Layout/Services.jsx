@@ -3,12 +3,12 @@ import Section from "../Section";
 import { FaCircleCheck } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
-const Services = () => { 
+const Services = () => {
   const navigate = useNavigate();
   return (
-    <Section id="services" className="bg-white text-gray-800 dark:bg-gray-900">
-      <div className="px-[1rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8">
-        <h2 className="text-3xl font-bold text-center mb-8 dark:text-gray-200">
+    <Section id='services' className='bg-white text-gray-800 dark:bg-gray-900'>
+      <div className='px-[1rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8'>
+        <h2 className='text-3xl font-bold text-center mb-8 dark:text-gray-200'>
           Our Core Services
         </h2>
         {/* <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 mx-auto mb-8 dark:text-gray-400">
@@ -18,7 +18,7 @@ const Services = () => {
           integrated approach helps organizations innovate, scale, and stay
           future-ready.
         </p> */}
-        <p className="text-base md:text-sm lg:text-md xl:text-lg text-gray-600 mx-auto mb-8 dark:text-gray-400">
+        <p className='text-base md:text-sm lg:text-md xl:text-lg text-gray-600 mx-auto mb-8 dark:text-gray-400'>
           We offer expert SAP consulting for the utility sector, helping
           organizations streamline operations, enhance efficiency, and achieve
           regulatory compliance. Our enterprise IT solutions, including cloud
@@ -28,22 +28,21 @@ const Services = () => {
           drone-based surveying—provide actionable location insights to optimize
           infrastructure, asset management, and strategic planning.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-4'>
           <div
-            id="sapservice"
-            className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
-          >
-            <h3 className="text-xl md:text-2xl font-bold mb-4">
+            id='sapservice'
+            className='flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300'>
+            <h3 className='text-xl md:text-2xl font-bold mb-4'>
               SAP Consulting & Implementation
             </h3>
-            <p className="text-gray-700 mt-5">
+            <p className='text-gray-700 mt-5'>
               Optimize and transform your enterprise with scalable SAP
               solutions. With over 15 years of
               <strong> expertise in the utility sector</strong>, we offer
               full-cycle SAP consulting, implementation, and support services
               designed to align with industry-specific challenges.
             </p>
-            <div className="mt-10 mb-[3rem]">
+            <div className='mt-10 mb-[3rem]'>
               {[
                 {
                   id: 1,
@@ -74,28 +73,27 @@ const Services = () => {
                   desc: "Expertise in Utility Business Processes",
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 mt-4 ms-2">
-                  <div className="text-blue-700 mt-1">
+                <div key={i} className='flex items-start gap-4 mt-4 ms-2'>
+                  <div className='text-blue-700 mt-1'>
                     <FaCircleCheck size={20} />
                   </div>
-                  <p className="text-gray-700">{item.desc}</p>
+                  <p className='text-gray-700'>{item.desc}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-auto">
+            <div className='mt-auto'>
               <button
+                name='Explore SAP Services'
                 onClick={() => navigate("/sap")}
-                className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold"
-              >
+                className='border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold'>
                 Explore SAP Services
               </button>
             </div>
           </div>
           <div
-            id="itservice"
-            className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
-          >
-            <h3 className="text-xl md:text-2xl font-bold mb-4">
+            id='itservice'
+            className='flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300'>
+            <h3 className='text-xl md:text-2xl font-bold mb-4'>
               Enterprise IT Solutions
             </h3>
             {/* <p className="text-gray-700 mt-5">
@@ -103,13 +101,13 @@ const Services = () => {
               services. From cloud infrastructure to portal development, we
               empower digital transformation with reliable tech expertise.
             </p> */}
-            <p className="text-gray-700 mt-5">
+            <p className='text-gray-700 mt-5'>
               Enhance agility, scalability, and security across your enterprise
               with our robust IT services. We deliver future-ready technology
               solutions that support digital transformation, secure
               infrastructure, and seamless enterprise operations.
             </p>
-            <div className="mt-10 mb-[3rem]">
+            <div className='mt-10 mb-[3rem]'>
               {[
                 {
                   id: 1,
@@ -152,37 +150,36 @@ const Services = () => {
                   desc: "Analytics Dashboards Development",
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 mt-4 ms-2">
-                  <div className="text-blue-700 mt-1">
+                <div key={i} className='flex items-start gap-4 mt-4 ms-2'>
+                  <div className='text-blue-700 mt-1'>
                     <FaCircleCheck size={20} />
                   </div>
-                  <p className="text-gray-700">{item.desc}</p>
+                  <p className='text-gray-700'>{item.desc}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-auto">
+            <div className='mt-auto'>
               <button
+                name='Discover IT Services'
                 onClick={() => navigate("/it")}
-                className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold"
-              >
+                className='border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold'>
                 Discover IT Services
               </button>
             </div>
           </div>
           <div
-            id="gisservice"
-            className="flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300"
-          >
-            <h3 className="text-xl md:text-2xl font-bold mb-4">
+            id='gisservice'
+            className='flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300'>
+            <h3 className='text-xl md:text-2xl font-bold mb-4'>
               Geospatial Intelligence Services
             </h3>
-            <p className="text-gray-700 mt-5">
+            <p className='text-gray-700 mt-5'>
               Unlock powerful insights from location-based data. Our geospatial
               solutions merge GIS technology with drone-based surveying to
               support planning, infrastructure, utility networks, and
               environmental studies.
             </p>
-            <div className="mt-10 mb-[3rem]">
+            <div className='mt-10 mb-[3rem]'>
               {[
                 {
                   id: 1,
@@ -209,19 +206,19 @@ const Services = () => {
                   desc: "3D Terrain Modeling & Visualization",
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 mt-4 ms-2">
-                  <div className="text-blue-700 mt-1">
+                <div key={i} className='flex items-start gap-4 mt-4 ms-2'>
+                  <div className='text-blue-700 mt-1'>
                     <FaCircleCheck size={20} />
                   </div>
-                  <p className="text-gray-700">{item.desc}</p>
+                  <p className='text-gray-700'>{item.desc}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-auto">
+            <div className='mt-auto'>
               <button
+                name='Explore Geospatial Services'
                 onClick={() => navigate("/geo")}
-                className="border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold"
-              >
+                className='border border-blue-700 text-blue-700 hover:bg-blue-900 hover:text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold'>
                 Explore Geospatial Services
               </button>
             </div>
