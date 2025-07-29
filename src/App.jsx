@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/geo-projects" element={<Projects />} />
         <Route path="/sap" element={<SAP />} />
         <Route path="/it" element={<ITPage />} />
         <Route path="/geo" element={<GeoSpatial />} />

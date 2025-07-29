@@ -62,7 +62,7 @@ const Contact = () => {
                   Phone
                 </h2>
                 <p className="text-sm lg:text-lg text-gray-600 dark:text-gray-400">
-                  +91 123 456 7890
+                  +91 9966033328
                 </p>
                 <p></p>
               </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                   Email
                 </h2>
                 <p className="text-sm lg:text-lg text-gray-600 dark:text-gray-400">
-                  info@gbserp.com
+                  ceo@gbserp.com
                 </p>
                 <p></p>
               </div>

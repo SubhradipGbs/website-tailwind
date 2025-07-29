@@ -13,27 +13,33 @@ import { navigations } from "../../constants/constants";
 const Footer = () => {
   const date = new Date();
   return (
-    <Section className="bg-gray-100 pt-12 pb-0 mb-0 lg:pt-16 lg:pb-0 xl:pt-20 xl:pb-0">
-      <iframe
+    <Section className="bg-gray-100 pt-0 pb-0 mb-0 lg:pt-0 lg:pb-0 xl:pt-0 xl:pb-0">
+      {/* <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58971.110174792775!2d88.22635154863282!3d22.515646800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270ea077cc165%3A0x5bcca8f544194bb6!2sGlobal%20Business%20Solutions!5e0!3m2!1sen!2sin!4v1744217435286!5m2!1sen!2sin"
         loading="lazy"
         className="w-full max-w-full"
         height={400}
-      />
+      /> */}
       <div className="bg-gray-900 py-6 px-[2rem] text-white">
         <div className="flex flex-col flex-wrap md:flex-row justify-around gap-y-4 mb-4">
           <div className="px-2 w-full lg:w-4/12">
             <h2 className="text-xl font-semibold mb-4">About GBS</h2>
             <p className="mb-4 text-sm leading-relaxed">
-              GBS ERP is a leading IT solutions provider specializing in SAP,
-              IT, GIS, and Survey services. With over 15 years of experience, we
+              GBS is a leading IT solutions provider specializing in SAP, IT,
+              GIS, and Survey services. With over 15 years of experience, we
               deliver innovative technology solutions to clients worldwide.
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: FaFacebookF, link: "https://www.facebook.com/share/1E7RpBRi58/" },
+                {
+                  Icon: FaFacebookF,
+                  link: "https://www.facebook.com/share/1E7RpBRi58/",
+                },
                 { Icon: FaTwitter, link: "https://twitter.com" },
-                { Icon: FaLinkedinIn, link: "https://www.linkedin.com/company/gbserp" },
+                {
+                  Icon: FaLinkedinIn,
+                  link: "https://www.linkedin.com/company/gbserp",
+                },
                 { Icon: FaInstagram, link: "https://instagram.com" },
               ].map(({ Icon, link }, idx) => (
                 <a
@@ -66,9 +72,6 @@ const Footer = () => {
               <li>SAP Service</li>
               <li>GIS Service</li>
               <li>IT Service</li>
-              <li>Survey & Drone Survey</li>
-              <li>IT Consulting</li>
-              <li>Digital Transformation</li>
             </ul>
           </div>
           <div className="px-2 w-full lg:w-4/12">
@@ -91,7 +94,7 @@ const Footer = () => {
         <hr className="border-gray-700 mb-6" />
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p className="mb-4 md:mb-0">
-            © {date.getFullYear()} GBS ERP. All rights reserved.
+            © {date.getFullYear()} GBS. All rights reserved.
           </p>
           <ul className="flex gap-4 flex-wrap justify-center">
             <li className="hover:underline cursor-pointer">Privacy Policy</li>

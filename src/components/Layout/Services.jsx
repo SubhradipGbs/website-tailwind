@@ -3,20 +3,30 @@ import Section from "../Section";
 import { FaCircleCheck } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
-const Services = () => {
+const Services = () => { 
   const navigate = useNavigate();
   return (
     <Section id="services" className="bg-white text-gray-800 dark:bg-gray-900">
-      <div className="px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8">
+      <div className="px-[1rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-8">
         <h2 className="text-3xl font-bold text-center mb-8 dark:text-gray-200">
           Our Core Services
         </h2>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8 dark:text-gray-400">
+        {/* <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 mx-auto mb-8 dark:text-gray-400">
           We deliver end-to-end SAP consulting, enterprise IT services, and
           geospatial solutions tailored for the utility sector and beyond. From
           digital transformation to intelligent infrastructure planning, our
           integrated approach helps organizations innovate, scale, and stay
           future-ready.
+        </p> */}
+        <p className="text-base md:text-sm lg:text-md xl:text-lg text-gray-600 mx-auto mb-8 dark:text-gray-400">
+          We offer expert SAP consulting for the utility sector, helping
+          organizations streamline operations, enhance efficiency, and achieve
+          regulatory compliance. Our enterprise IT solutions, including cloud
+          services, custom software development and enable digital
+          transformation across industries. Additionally, our geospatial
+          intelligence services—featuring Web-GIS, spatial analytics, and
+          drone-based surveying—provide actionable location insights to optimize
+          infrastructure, asset management, and strategic planning.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           <div
@@ -64,8 +74,8 @@ const Services = () => {
                   desc: "Expertise in Utility Business Processes",
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 mt-4 ms-2">
-                  <div className="text-blue-700">
+                <div key={i} className="flex items-start gap-4 mt-4 ms-2">
+                  <div className="text-blue-700 mt-1">
                     <FaCircleCheck size={20} />
                   </div>
                   <p className="text-gray-700">{item.desc}</p>
@@ -88,10 +98,16 @@ const Services = () => {
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               Enterprise IT Solutions
             </h3>
-            <p className="text-gray-700 mt-5">
+            {/* <p className="text-gray-700 mt-5">
               Future-proof your organization with agile, secure, and scalable IT
               services. From cloud infrastructure to portal development, we
               empower digital transformation with reliable tech expertise.
+            </p> */}
+            <p className="text-gray-700 mt-5">
+              Enhance agility, scalability, and security across your enterprise
+              with our robust IT services. We deliver future-ready technology
+              solutions that support digital transformation, secure
+              infrastructure, and seamless enterprise operations.
             </p>
             <div className="mt-10 mb-[3rem]">
               {[
@@ -136,8 +152,8 @@ const Services = () => {
                   desc: "Analytics Dashboards Development",
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 mt-4 ms-2">
-                  <div className="text-blue-700">
+                <div key={i} className="flex items-start gap-4 mt-4 ms-2">
+                  <div className="text-blue-700 mt-1">
                     <FaCircleCheck size={20} />
                   </div>
                   <p className="text-gray-700">{item.desc}</p>
@@ -193,8 +209,8 @@ const Services = () => {
                   desc: "3D Terrain Modeling & Visualization",
                 },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 mt-4 ms-2">
-                  <div className="text-blue-700">
+                <div key={i} className="flex items-start gap-4 mt-4 ms-2">
+                  <div className="text-blue-700 mt-1">
                     <FaCircleCheck size={20} />
                   </div>
                   <p className="text-gray-700">{item.desc}</p>

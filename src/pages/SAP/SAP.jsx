@@ -4,9 +4,11 @@ import Button from "../../components/Button";
 import { FaCircleCheck, FaDatabase } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { clients } from "../../constants/constants";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 const SAP = () => {
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -62,7 +64,7 @@ const SAP = () => {
           Discover our comprehensive SAP services designed to streamline your
           business operations.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 px-[2rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 px-[1rem] md:px-[3rem] lg:px-[5rem] xl:px-[7rem] py-3">
           <div className="text-blue-800 flex flex-col bg-gradient-to-r from-blue-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300">
             <div className="flex items-center gap-4 mb-4">
               <FaDatabase size={30} />
@@ -127,6 +129,51 @@ const SAP = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </Section>
+      <Section className="bg-gray-100">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Clients</h2>
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-8">
+          Trusted by leading companies around the world
+        </p>
+        <div>
+          <div className="py-2 lg:py-5 xl:py-8 mx-2 md:mx-8 lg:mx-10 xl:mx-12 dark:bg-gray-800">
+            <Swiper
+              className="mySwiper"
+              modules={[Autoplay]}
+              breakpoints={{
+                0: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+                1280: {
+                  slidesPerView: 5,
+                },
+              }}
+              loop={true}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                reverseDirection: true,
+              }}
+              speed={5000}
+              spaceBetween={20}
+            >
+              {clients.map((client, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2">
+                    <img
+                      src={`/sap/${client.logo}`}
+                      alt={client.alt}
+                      className="h-15 w-auto md:h-20 object-cover"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </Section>

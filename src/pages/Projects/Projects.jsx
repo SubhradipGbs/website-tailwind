@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Section from "../../components/Section";
-import Button from "../../components/Button";
 import CountUp from "react-countup";
 import { projectsData } from "../../constants/constants";
-import { animateScroll, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
@@ -154,7 +153,7 @@ const Projects = () => {
             <button
               key={index}
               onClick={() => filterProjects(item.category)}
-              className={`border cursor-pointer border-blue-700 ${
+              className={`border cursor-pointer border-blue-700 text-xs md:text-md lg:text-lg ${
                 index == 0 && "rounded-l-full"
               } ${
                 index == 5 && "rounded-r-full"
@@ -172,10 +171,10 @@ const Projects = () => {
           {projects.map((item, index) => (
             <div
               key={item.title + index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 text-center flex flex-col gap-4 max-w-sm mx-auto border border-gray-100 hover:-translate-y-0.5 transition-transform duration-200"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-6 text-center flex flex-col max-w-sm mx-auto border border-gray-100 hover:-translate-y-0.5 transition-transform duration-200 min-h-[400px]"
             >
               <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-16 w-16 rounded-full shadow-md bg-blue-50 flex justify-center items-center text-blue-800">
+                <div className="size-16 rounded-full 2xl:size-20 shadow-md bg-blue-50 flex justify-center items-center text-blue-800">
                   <i className={`fas ${item.iconClass} fa-2x text-primary`} />
                 </div>
                 <span className="py-1 px-3 bg-emerald-500 text-white rounded-full text-xs font-semibold uppercase tracking-wide shadow-sm">
@@ -183,7 +182,7 @@ const Projects = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 mt-4">
                 <h2 className="text-xl font-bold text-gray-800">
                   {item.title}
                 </h2>
@@ -191,13 +190,15 @@ const Projects = () => {
                   {item.description}
                 </p>
               </div>
-              <hr className="border-gray-200" />
-              <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mx-4">
-                {/* <FaBriefcase className="text-blue-600" /> */}
-                <span>
-                  <strong className="text-gray-700">Client: </strong>
-                  {item.client}
-                </span>
+
+              <div className="mt-auto pt-4">
+                <hr className="border-gray-200 mb-3" />
+                <div className="flex items-end justify-center gap-2 text-gray-500 text-sm mx-4">
+                  <span>
+                    <strong className="text-gray-700">Client: </strong>
+                    {item.client}
+                  </span>
+                </div>
               </div>
             </div>
           ))}

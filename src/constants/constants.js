@@ -105,112 +105,113 @@ export const clients = [
     alt: "Client 5",
   },
   {
-    id: 5,
+    id: 6,
     logo: "/TPWODL.png",
-    alt: "Client 5",
+    alt: "Client 6",
   },
   {
-    id: 5,
+    id: 7,
     logo: "/TCS.png",
-    alt: "Client 5",
+    alt: "Client 7",
   },
   {
-    id: 5,
+    id: 8,
     logo: "/CGPL.png",
-    alt: "Client 5",
+    alt: "Client 8",
   },
   {
-    id: 5,
+    id: 9,
     logo: "/Saudi.png",
-    alt: "Client 5",
+    alt: "Client 9",
   },
   {
-    id: 5,
+    id: 10,
     logo: "/MWSC.png",
-    alt: "Client 5",
+    alt: "Client 10",
   },
   {
-    id: 5,
+    id: 11,
     logo: "/NTPC.png",
-    alt: "Client 5",
+    alt: "Client 11",
   },
   {
-    id: 5,
+    id: 12,
     logo: "/Capgemini.png",
-    alt: "Client 5",
+    alt: "Client 12",
   },
   {
-    id: 5,
+    id: 13,
     logo: "/KRAHEJA.png",
-    alt: "Client 5",
+    alt: "Client 13",
   },
   {
-    id: 5,
+    id: 14,
     logo: "/GAILINDIA.png",
-    alt: "Client 5",
+    alt: "Client 14",
+  },
+  {
+    id: 15,
+    logo: "/SCHNEIDER.png",
+    alt: "Client 15",
   },
 ];
 
 export const clients2 = [
   {
     id: 1,
-    logo: "/ORSAC.png",
+    logo: "/gis/ORSAC.png",
     alt: "Client 1",
   },
+
   {
-    id: 1,
-    logo: "/OPTCL.png",
-    alt: "Client 1",
+    id: 2,
+    logo: "/gis/HALDIA.png",
+    alt: "Client 2",
   },
   {
-    id: 1,
-    logo: "/HALDIA.png",
-    alt: "Client 1",
+    id: 4,
+    logo: "/gis/WBSEDCL.png",
+    alt: "Client 4",
   },
   {
-    id: 1,
-    logo: "/ESRI.png",
-    alt: "Client 1",
+    id: 5,
+    logo: "/gis/WBPDCL.png",
+    alt: "Client 5",
   },
   {
-    id: 1,
-    logo: "/WBSEDCL.png",
-    alt: "Client 1",
+    id: 7,
+    logo: "/gis/LINDE.png",
+    alt: "Client 7",
   },
   {
-    id: 1,
-    logo: "/WBPDCL.png",
-    alt: "Client 1",
+    id: 8,
+    logo: "/gis/MRSAC.png",
+    alt: "Client 9",
   },
   {
-    id: 1,
-    logo: "/WBDST.png",
-    alt: "Client 1",
+    id: 9,
+    logo: "/gis/SUDA.png",
+    alt: "Client 10",
   },
   {
-    id: 1,
-    logo: "/TAS.png",
-    alt: "Client 1",
+    id: 10,
+    logo: "/gis/UMERKOT.png",
+    alt: "Client 11",
   },
   {
-    id: 1,
-    logo: "/SCHNEIDER.png",
-    alt: "Client 1",
+    id: 11,
+    logo: "/gis/RAILWAY.png",
+    alt: "Client 12",
   },
   {
-    id: 1,
-    logo: "/ROSEWARE.png",
-    alt: "Client 1",
+    id: 12,
+    logo: "/gis/DFC.png",
+    alt: "Client 13",
   },
   {
-    id: 1,
-    logo: "/Linde.png",
-    alt: "Client 1",
-  },
-  {
-    id: 1,
-    logo: "/Inox.png",
-    alt: "Client 1",
+    id: 12,
+    logo: "/gis/WB.png",
+    alt: "Client 14",
   },
 ];
 
@@ -444,7 +445,7 @@ export const projectsData = [
     icon: "FaSatellite",
     description:
       "Processing and analysis of high-resolution RESOURCESAT-2 LISS-IV imagery using PCI Geomatica for environmental monitoring.",
-    client: "Remote Sensing Application Centres",
+    client: "Odisha Space Application Centre (ORSAC)",
   },
   {
     title: "WorldView-II Processing",
@@ -454,7 +455,7 @@ export const projectsData = [
     icon: "FaSatellite",
     description:
       "Advanced processing of very high-resolution WorldView-II satellite imagery for detailed urban and rural mapping.",
-    client: "Remote Sensing Application Centres",
+    client: "Odisha Space Application Centre (ORSAC)",
   },
   {
     title: "Base Map Creation",
@@ -595,5 +596,25 @@ export const projectsData = [
     description:
       "Establishment of high-precision DGPS control networks for various mapping and surveying applications.",
     client: "Maharashtra Remote Sensing Application Centre (MRSAC)",
+  },
+  {
+    title: "Soil Testing",
+    category: "gis",
+    badgeText: "GIS ANALYSIS",
+    iconClass: "fa-vial",
+    icon: "FaFlaskVial",
+    description:
+      "GIS-based analysis of soil sample data to evaluate fertility, pH, and nutrient levels, supporting informed urban development and land-use planning.",
+    client: "State Urban Development Agency (SUDA)",
+  },
+  {
+    title: "Water Utility Mapping",
+    category: "gis",
+    badgeText: "GIS ANALYSIS",
+    iconClass: "fa-faucet",
+    icon: "FaFaucet",
+    description:
+      "Mapping and analysis of water utility infrastructure using GIS tools to support efficient water distribution, maintenance, and planning.",
+    client: "Malé Water & Sewerage Company Pvt. Ltd. (MWSC)",
   },
 ];

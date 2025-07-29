@@ -40,7 +40,7 @@ const Testimonials = () => {
               position: "Project Manager, OPTCL",
               rating: 4.5,
               testimonial:
-                "The drone survey services provided by GBS ERP significantly reduced our project timeline and improved accuracy. Their professional team delivered high-quality data that exceeded our expectations.",
+                "The drone survey services provided by GBS significantly reduced our project timeline and improved accuracy. Their professional team delivered high-quality data that exceeded our expectations.",
             },
           ].map((item, i) => (
             <div

@@ -39,9 +39,9 @@ const Clients = () => {
               <SwiperSlide key={index}>
                 <div className="flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2">
                   <img
-                    src={client.logo}
+                    src={`/sap/${client.logo}`}
                     alt={client.alt}
-                    className="h-10 w-auto md:h-15"
+                    className="h-15 w-auto md:h-20 object-cover"
                   />
                 </div>
               </SwiperSlide>
@@ -78,7 +78,7 @@ const Clients = () => {
                   <img
                     src={client.logo}
                     alt={client.alt}
-                    className="h-10 w-auto md:h-15"
+                    className="h-15 w-auto md:h-20"
                   />
                 </div>
               </SwiperSlide>

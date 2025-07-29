@@ -56,7 +56,7 @@ const Home = () => {
       <div></div>
       <About />
       <Services />
-      <div className="w-full flex flex-col md:flex-row px-4 lg:px-32 justify-between items-center bg-blue-600 p-6 min-h-[12rem]">
+      <div className="w-full flex flex-col md:flex-row px-4 lg:px-32 justify-between items-center bg-gradient-to-r from-blue-700 to-blue-500 p-6 min-h-[12rem]">
         <div className="flex flex-col gap-4 text-center md:text-left">
           <h2 className="text-lg xl:text-2xl text-white font-bold">
             Ready to transform your business with our IT solutions?
@@ -78,6 +78,12 @@ const Home = () => {
       <Projects />
       <Testimonials />
       <Contact />
+      <iframe
+        className="w-full max-w-full"
+        height={500}
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2191.524049585611!2d88.30155210418694!3d22.515832483818922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270ea077cc165%3A0x5bcca8f544194bb6!2sGlobal%20Business%20Solutions!5e0!3m2!1sen!2sin!4v1747114053911!5m2!1sen!2sin"
+        loading="lazy"
+      ></iframe>
       <div
         className={`fixed bottom-6 right-6 z-50 ${
           isScrolled ? "block" : "hidden"

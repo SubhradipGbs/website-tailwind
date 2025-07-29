@@ -9,6 +9,7 @@ import {
 import { FaGlobeAmericas } from "react-icons/fa";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
+import Dropdown from "../Dropdown";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -130,14 +131,15 @@ const Projects = () => {
           ))}
         </div>
         <div className="flex justify-center items-center mt-8">
-          <Button
+          {/* <Button
             onClick={() => {
               navigate("/projects");
             }}
             className="rounded bg-blue-700 text-white hover:bg-blue-800 hover:-translate-y-0.5 transition-transform duration-200"
           >
             View All Project
-          </Button>
+          </Button> */}
+          <Dropdown/>
         </div>
       </div>
     </Section>

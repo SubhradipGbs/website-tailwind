@@ -1,7 +1,11 @@
 import React from "react";
 import Section from "../Section";
-import { FaCheck, FaGlobe, FaHeadset, FaUsers } from "react-icons/fa6";
+import { FaCheck, FaGlobe, FaHeadset, FaMedal, FaUsers } from "react-icons/fa6";
 import CountUp from "react-countup";
+import { FaCheckCircle, FaProjectDiagram } from "react-icons/fa";
+import { GrCertificate } from "react-icons/gr";
+import { LuHandshake } from "react-icons/lu";
+import { MdAutoGraph, MdEmojiObjects } from "react-icons/md";
 
 const About = () => {
   return (
@@ -13,7 +17,7 @@ const About = () => {
             <img
               src="/LOGO_NEW_01.png"
               alt="Logo"
-              className="size-auto object-contain"
+              className="max-h-[500px] size-auto object-contain"
             />
           </div>
 
@@ -55,25 +59,45 @@ const About = () => {
             </p>
 
             {/* Feature Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
               {[
                 {
-                  icon: <FaCheck size={28} className="text-blue-600 dark:text-blue-400" />,
+                  icon: (
+                    <FaCheck
+                      size={28}
+                      className="text-blue-600 dark:text-blue-400"
+                    />
+                  ),
                   title: "Expertise",
                   desc: "15+ years of industry leadership",
                 },
                 {
-                  icon: <FaUsers size={28} className="text-blue-600 dark:text-blue-400" />,
+                  icon: (
+                    <FaUsers
+                      size={28}
+                      className="text-blue-600 dark:text-blue-400"
+                    />
+                  ),
                   title: "Team",
                   desc: "Certified domain professionals",
                 },
                 {
-                  icon: <FaGlobe size={28} className="text-blue-600 dark:text-blue-400" />,
+                  icon: (
+                    <FaGlobe
+                      size={28}
+                      className="text-blue-600 dark:text-blue-400"
+                    />
+                  ),
                   title: "Global Reach",
                   desc: "Clients across multiple continents",
                 },
                 {
-                  icon: <FaHeadset size={28} className="text-blue-600 dark:text-blue-400" />,
+                  icon: (
+                    <FaHeadset
+                      size={28}
+                      className="text-blue-600 dark:text-blue-400"
+                    />
+                  ),
                   title: "Support",
                   desc: "Dedicated 24/7 technical support",
                 },
@@ -88,20 +112,86 @@ const About = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
-            <div className="mt-6 flex justify-center lg:justify-start">
+            {/* <div className="mt-6 flex justify-center lg:justify-start">
               <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-full transition-transform hover:-translate-y-1 cursor-pointer font-semibold text-sm md:text-base">
                 Learn More About Us
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
+      <div className="w-full flex flex-col bg-gradient-to-r from-blue-700 to-blue-500 p-6 min-h-[12rem] shadow-sm mt-12">
+        <div className="mb-6">
+          <h2 className="text-white text-3xl font-semibold">Why Choose GBS?</h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+          {[
+            {
+              icon: <FaCheckCircle size={30} />,
+              title: "15+ Years of Proven Expertise",
+              desc: "in digital transformation and consulting.",
+            },
+            {
+              icon: <FaMedal size={30} />,
+              title: "Certified Professionals",
+              desc: "with deep domain and technical knowledge.",
+            },
+            {
+              icon: <FaGlobe size={30} />,
+              title: "Global Clientele",
+              desc: "across utilities, infrastructure, government, and enterprise sectors",
+            },
+            {
+              icon: <FaHeadset size={30} />,
+              title: "24/7 Technical Support",
+              desc: "ensuring business continuity and rapid response.",
+            },
+            {
+              icon: <GrCertificate size={30} />,
+              title: "ISO-Certified Excellence",
+              desc: "with ISO 27001:2022 & ISO 9001:2015 certifications for security and quality",
+            },
+            {
+              icon: <LuHandshake size={30} />,
+              title: "Client-Centric Approach",
+              desc: "focused on aligning solutions with business goals and ROI.",
+            },
+            {
+              icon: <FaProjectDiagram size={30} />,
+              title: "End-to-End Service Portfolio",
+              desc: "covering SAP, IT development, GIS, and drone surveying.",
+            },
+            {
+              icon: <MdAutoGraph size={30} />,
+              title: "Agile & Scalable Solutions",
+              desc: "tailored to meet evolving business needs.",
+            },
+            {
+              icon: <MdEmojiObjects size={35} />,
+              title: "Innovation-Driven Culture",
+              desc: "leveraging emerging technologies like AI, IoT, and automation.",
+            },
+          ].map((item, i) => (
+            <div className="flex gap-3" key={i}>
+              <div className="mt-1 text-white text-xl 2xl:text-3xl">
+                {item.icon}
+              </div>
+              <div>
+                <h3 className="text-white text-xl  2xl:text-3xl font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-gray-200 mt-2 text-md 2xl:text-xl">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {/* Statistics Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center mt-10 px-4 md:px-6 lg:px-10 py-10 mx-auto">
-        {/* Statistics Cards */}
         {[
           {
             count: "500",
