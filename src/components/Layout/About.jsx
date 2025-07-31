@@ -20,7 +20,7 @@ const About = () => {
           {/* Logo */}
           <figure className='flex justify-center'>
             <img
-              src='/LOGO_NEW_01.png'
+              src='/LOGO_NEW_01.webp'
               alt='GBS IT Consulting and Services Company Logo'
               className='max-h-[500px] size-auto object-contain'
               loading='lazy'

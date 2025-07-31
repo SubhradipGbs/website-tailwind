@@ -10,17 +10,19 @@ import Footer from "./components/Layout/Footer";
 import SAP from "./pages/SAP/SAP";
 import ITPage from "./pages/IT/ITPage";
 import GeoSpatial from "./pages/Geo/GeoSpatial";
+import PageNotFound from "./pages/Error/Error404";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/geo-projects" element={<Projects />} />
-        <Route path="/sap" element={<SAP />} />
-        <Route path="/it" element={<ITPage />} />
-        <Route path="/geo" element={<GeoSpatial />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/geo-projects' element={<Projects />} />
+        <Route path='/sap' element={<SAP />} />
+        <Route path='/it' element={<ITPage />} />
+        <Route path='/geo' element={<GeoSpatial />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

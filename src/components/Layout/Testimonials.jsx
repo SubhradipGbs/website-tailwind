@@ -6,21 +6,20 @@ import Button from "../Button";
 const Testimonials = () => {
   return (
     <Section
-      id="testimonials"
-      className="bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-200"
-    >
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center mb-8">
+      id='testimonials'
+      className='bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-200'>
+      <div className='container mx-auto px-4 py-12'>
+        <h2 className='text-3xl font-bold text-center mb-8'>
           What Our Clients Say
         </h2>
-        <p className="text-md md:text-lg lg:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-10 dark:text-gray-400">
+        <p className='text-md md:text-lg lg:text-xl text-center text-gray-600 max-w-[700px] mx-auto mb-10 dark:text-gray-400'>
           Trusted by leading organizations across industries
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {[
             {
               name: "Ahmed Hunaif",
-              imageUrl: "/hunaif.jpeg",
+              imageUrl: "/hunaif.webp",
               position: "GM ICT, MWSC",
               rating: 5,
               testimonial:
@@ -28,7 +27,7 @@ const Testimonials = () => {
             },
             {
               name: "Mr. Adam Azim",
-              imageUrl: "/Adam Azim.png",
+              imageUrl: "/Adam Azim.webp",
               position: "Finance Head, MWSC",
               rating: 5,
               testimonial:
@@ -36,7 +35,7 @@ const Testimonials = () => {
             },
             {
               name: "OPTCL",
-              imageUrl: "/OPTCL.png",
+              imageUrl: "/gis/OPTCL.webp",
               position: "Project Manager, OPTCL",
               rating: 4.5,
               testimonial:
@@ -45,42 +44,42 @@ const Testimonials = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col space-y-5 dark:bg-gray-900"
-            >
-              <div className="flex items-center space-x-4">
+              className='bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col space-y-5 dark:bg-gray-900'>
+              <div className='flex items-center space-x-4'>
                 <img
                   src={item.imageUrl}
                   alt={item.name}
-                  className="w-16 h-16 rounded-full"
+                  className='w-16 h-16 rounded-full'
+                  loading='lazy'
                 />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                  <h3 className='text-lg font-semibold text-gray-800 dark:text-gray-200'>
                     {item.name}
                   </h3>
-                  <p className="text-sm text-gray-400 dark:text-gray-400">
+                  <p className='text-sm text-gray-400 dark:text-gray-400'>
                     {item.position}
                   </p>
                 </div>
               </div>
 
-              <div className="relative bg-gray-100 p-4 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                <FaQuoteLeft className="text-blue-400 text-2xl absolute -top-3 left-3 bg-white rounded-full p-1 shadow dark:bg-gray-700" />
-                <p className="text-gray-700 text-sm leading-relaxed italic dark:text-gray-300">
+              <div className='relative bg-gray-100 p-4 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700'>
+                <FaQuoteLeft className='text-blue-400 text-2xl absolute -top-3 left-3 bg-white rounded-full p-1 shadow dark:bg-gray-700' />
+                <p className='text-gray-700 text-sm leading-relaxed italic dark:text-gray-300'>
                   {item.testimonial}
                 </p>
-                <FaQuoteRight className="text-blue-400 text-2xl absolute -bottom-3 right-3 bg-white rounded-full p-1 shadow dark:bg-gray-700" />
+                <FaQuoteRight className='text-blue-400 text-2xl absolute -bottom-3 right-3 bg-white rounded-full p-1 shadow dark:bg-gray-700' />
               </div>
 
-              <div className="flex items-center space-x-1 mt-auto">
+              <div className='flex items-center space-x-1 mt-auto'>
                 {[...Array(Math.floor(item.rating))].map((_, index) => (
-                  <span key={index} className="text-yellow-400 text-lg">
+                  <span key={index} className='text-yellow-400 text-lg'>
                     ★
                   </span>
                 ))}
                 {item.rating % 1 !== 0 && (
-                  <span className="text-yellow-400 text-lg">☆</span>
+                  <span className='text-yellow-400 text-lg'>☆</span>
                 )}
-                <span className="text-sm text-gray-500 ml-2 dark:text-gray-400">
+                <span className='text-sm text-gray-500 ml-2 dark:text-gray-400'>
                   ({item.rating.toFixed(1)})
                 </span>
               </div>

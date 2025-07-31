@@ -65,9 +65,10 @@ const Hero = () => {
         </div>
         <div className='w-full h-full flex justify-center items-center mt-6 lg:mt-0'>
           <img
-            src='/celebration.png'
+            src='/celebration.webp'
             alt='Logo'
             className='size-[30rem] sm:size-[40rem] lg:size-[30rem] object-cover'
+            loading='lazy'
           />
         </div>
       </div>

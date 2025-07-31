@@ -66,12 +66,14 @@ const Header = () => {
       <div className='mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center'>
         {/* Logo */}
         <Link to='home'>
-          <div className='flex items-center'>
+          <div className='relative flex items-center'>
             <img
-              src='/LOGO_NEW_01.png'
+              src='/LOGO_NEW_01.webp'
               alt='Logo'
               className='h-10 md:h-[4.5rem] w-auto dark:drop-shadow-lg'
+              loading='lazy'
             />
+            <div className='absolute left-0 top-0 w-[100%] h-[100%]'></div>
           </div>
         </Link>
 

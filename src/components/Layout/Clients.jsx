@@ -36,16 +36,17 @@ const Clients = () => {
             <ul className='flex'>
               {clients.map((client, index) => (
                 <SwiperSlide key={index} tag='li'>
-                  <figure className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                  <figure className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                     <img
                       src={`/sap/${client.logo}`}
                       alt={client.alt || `Logo of ${client.name || "client"}`}
-                      className='h-15 md:h-20 w-auto'
+                      className='h-15 md:h-20 w-auto bg-cover'
                       loading='lazy'
                     />
                     {client.name && (
                       <figcaption className='sr-only'>{client.name}</figcaption>
                     )}
+                    <div className='absolute left-0 top-0 w-[100%] h-[100%]'></div>
                   </figure>
                 </SwiperSlide>
               ))}
@@ -72,16 +73,17 @@ const Clients = () => {
             <ul className='flex'>
               {clients2.map((client, index) => (
                 <SwiperSlide key={index} tag='li'>
-                  <figure className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                  <figure className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                     <img
                       src={client.logo}
                       alt={client.alt || `Logo of ${client.name || "client"}`}
-                      className='h-15 md:h-20 w-auto'
+                      className='h-15 md:h-20 w-auto bg-cover'
                       loading='lazy'
                     />
                     {client.name && (
                       <figcaption className='sr-only'>{client.name}</figcaption>
                     )}
+                    <div className='absolute left-0 top-0 w-[100%] h-[100%]'></div>
                   </figure>
                 </SwiperSlide>
               ))}

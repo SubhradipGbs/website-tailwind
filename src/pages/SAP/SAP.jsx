@@ -66,6 +66,7 @@ HANA, system upgrades, enterprise integration, GBS IT consulting'
               src='/sap-hero.png'
               alt='Logo'
               className='h-[25rem] md:[20rem] lg:h-[30rem] w-auto'
+              loading='lazy'
             />
           </div>
         </div>
@@ -150,7 +151,7 @@ HANA, system upgrades, enterprise integration, GBS IT consulting'
           Trusted by leading companies around the world
         </p>
         <div>
-          <div className='py-2 lg:py-5 xl:py-8 mx-2 md:mx-8 lg:mx-10 xl:mx-12 dark:bg-gray-800'>
+          <div className='py-2 lg:py-5 xl:py-8 mx-2  dark:bg-gray-800 bg-white'>
             <Swiper
               className='mySwiper'
               modules={[Autoplay]}
@@ -175,12 +176,14 @@ HANA, system upgrades, enterprise integration, GBS IT consulting'
               spaceBetween={20}>
               {clients.map((client, index) => (
                 <SwiperSlide key={index}>
-                  <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                  <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                     <img
                       src={`/sap/${client.logo}`}
                       alt={client.alt}
-                      className='h-15 w-auto md:h-20 object-cover'
+                      className='h-15 md:h-20 w-auto'
+                      loading='lazy'
                     />
+                    <div className='absolute w-[100%] h-[100%] top-0 left-0'></div>
                   </div>
                 </SwiperSlide>
               ))}

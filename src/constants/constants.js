@@ -81,77 +81,77 @@ export const servceSlides = [
 export const clients = [
   {
     id: 1,
-    logo: "/TPREL.png",
+    logo: "/TPREL.webp",
     alt: "Client 1",
   },
   {
     id: 2,
-    logo: "/ROSEWARE.png",
+    logo: "/ROSEWARE.webp",
     alt: "Client 2",
   },
   {
     id: 3,
-    logo: "/TPADL.png",
+    logo: "/TPADL.webp",
     alt: "Client 3",
   },
   {
     id: 4,
-    logo: "/TPCODL.png",
+    logo: "/TPCODL.webp",
     alt: "Client 4",
   },
   {
     id: 5,
-    logo: "/TPSODL.png",
+    logo: "/TPSODL.webp",
     alt: "Client 5",
   },
   {
     id: 6,
-    logo: "/TPWODL.png",
+    logo: "/TPWODL.webp",
     alt: "Client 6",
   },
   {
     id: 7,
-    logo: "/TCS.png",
+    logo: "/TCS.webp",
     alt: "Client 7",
   },
   {
     id: 8,
-    logo: "/CGPL.png",
+    logo: "/CGPL.webp",
     alt: "Client 8",
   },
   {
     id: 9,
-    logo: "/Saudi.png",
+    logo: "/Saudi.webp",
     alt: "Client 9",
   },
   {
     id: 10,
-    logo: "/MWSC.png",
+    logo: "/MWSC.webp",
     alt: "Client 10",
   },
   {
     id: 11,
-    logo: "/NTPC.png",
+    logo: "/NTPC.webp",
     alt: "Client 11",
   },
   {
     id: 12,
-    logo: "/Capgemini.png",
+    logo: "/Capgemini.webp",
     alt: "Client 12",
   },
   {
     id: 13,
-    logo: "/KRAHEJA.png",
+    logo: "/KRAHEJA.webp",
     alt: "Client 13",
   },
   {
     id: 14,
-    logo: "/GAILINDIA.png",
+    logo: "/GAILINDIA.webp",
     alt: "Client 14",
   },
   {
     id: 15,
-    logo: "/SCHNEIDER.png",
+    logo: "/SCHNEIDER.webp",
     alt: "Client 15",
   },
 ];
@@ -159,33 +159,33 @@ export const clients = [
 export const clients2 = [
   {
     id: 1,
-    logo: "/gis/ORSAC.png",
+    logo: "/gis/ORSAC.webp",
     alt: "Client 1",
   },
 
   {
     id: 2,
-    logo: "/gis/HALDIA.png",
+    logo: "/gis/HPL.webp",
     alt: "Client 2",
   },
   {
     id: 4,
-    logo: "/gis/WBSEDCL.png",
+    logo: "/gis/WBSEDCL.webp",
     alt: "Client 4",
   },
   {
     id: 5,
-    logo: "/gis/WBPDCL.png",
+    logo: "/gis/WBPDCL.webp",
     alt: "Client 5",
   },
   {
     id: 7,
-    logo: "/gis/LINDE.png",
+    logo: "/gis/LINDE.webp",
     alt: "Client 7",
   },
   {
     id: 8,
-    logo: "/gis/MRSAC.png",
+    logo: "/gis/MRSAC.webp",
     alt: "Client 9",
   },
   {
@@ -195,22 +195,22 @@ export const clients2 = [
   },
   {
     id: 10,
-    logo: "/gis/UMERKOT.png",
+    logo: "/gis/ASI.webp",
     alt: "Client 11",
   },
   {
     id: 11,
-    logo: "/gis/RAILWAY.png",
+    logo: "/gis/INDIAN-RAILWAY.webp",
     alt: "Client 12",
   },
   {
     id: 12,
-    logo: "/gis/DFC.png",
+    logo: "/gis/DFCCIL.webp",
     alt: "Client 13",
   },
   {
     id: 12,
-    logo: "/gis/WB.png",
+    logo: "/gis/WB.webp",
     alt: "Client 14",
   },
 ];

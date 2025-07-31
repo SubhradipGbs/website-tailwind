@@ -80,6 +80,7 @@ const ITPage = () => {
               src='/09.png'
               alt='Logo'
               className='max-h-[20rem] md:max-h-[25rem] lg:max-h-[30rem] w-auto object-contain'
+              loading='lazy'
             />
           </div>
         </div>
@@ -387,6 +388,9 @@ const ITPage = () => {
                 1024: {
                   slidesPerView: 3,
                 },
+                1280: {
+                  slidesPerView: 4,
+                },
               }}
               loop={true}
               autoplay={{
@@ -397,75 +401,91 @@ const ITPage = () => {
               speed={5000}
               spaceBetween={20}>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/OPTCL.png'
+                    src='/gis/OPTCL.webp'
                     alt='OPTCL'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/DST.png'
+                    src='/gis/DST.webp'
                     alt='DST'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/ORSAC.png'
+                    src='/gis/ORSAC.webp'
                     alt='ORSAC'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/WB.png'
+                    src='/gis/WB.webp'
                     alt='WB'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/OPTCL.png'
+                    src='/gis/OPTCL.webp'
                     alt='OPTCL'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/DST.png'
+                    src='/gis/DST.webp'
                     alt='DST'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/ORSAC.png'
+                    src='/gis/ORSAC.webp'
                     alt='ORSAC'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
+                <div className='relative flex justify-center items-center h-full hover:scale-105 transition-transform duration-300 ease-in-out p-2'>
                   <img
-                    src='/WB.png'
+                    src='/gis/WB.webp'
                     alt='WB'
                     className='h-15 w-auto md:h-20 object-cover'
+                    loading='lazy'
                   />
+                  <div className='absolute top-0 left-0 w-[100%] h-[100%]'></div>
                 </div>
               </SwiperSlide>
             </Swiper>

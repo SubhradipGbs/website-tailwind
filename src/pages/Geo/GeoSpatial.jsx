@@ -294,6 +294,7 @@ const GeoSpatial = () => {
                       src={`${client.logo}`}
                       alt={client.alt}
                       className='h-15 w-auto md:h-20'
+                      loading='lazy'
                     />
                   </div>
                 </SwiperSlide>
